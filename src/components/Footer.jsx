@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <p>&copy; 2025 MyApp. All rights reserved.</p>
+    <footer className="bg-dark text-white text-center p-3 mt-auto">
+      <p>© 2025 My Website. All Rights Reserved.</p>
     </footer>
   );
 };
