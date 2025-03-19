@@ -1,0 +1,30 @@
+/* Hero Section */
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://via.placeholder.com/1600x900/000000/ffffff?text=Learn+Something+New");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Feature Cards */
+  .feature-card {
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    background: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Call-to-Action Section */
+  .cta-section {
+    background: linear-gradient(45deg, #ff5722, #ff9800);
+    padding: 60px 0;
+  }
+  

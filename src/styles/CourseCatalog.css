@@ -1,21 +1,16 @@
-/* Welcome Section */
-.welcome-section {
+/* Search Bar */
+.search-bar {
   text-align: center;
-  margin: 40px 0;
+  margin-bottom: 20px;
 }
 
-.welcome-section h2 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.welcome-section p {
+.search-bar input {
+  width: 60%;
+  padding: 10px;
   font-size: 16px;
-}
-
-.welcome-section a {
-  color: #007bff;
-  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
 }
 
 /* Course Cards */
@@ -27,6 +22,7 @@
   text-align: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
+  margin-bottom: 20px;
 }
 
 .course-card img {
@@ -39,12 +35,26 @@
   margin-top: 10px;
 }
 
-.free {
-  color: green;
-  font-weight: bold;
+.course-card .category {
+  font-size: 14px;
+  color: #888;
 }
 
-.not-available {
-  color: red;
+.course-card .price {
   font-weight: bold;
+  color: #007bff;
+}
+
+.course-card .description {
+  font-size: 14px;
+  color: #666;
+}
+
+/* No Results Message */
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+  margin-top: 20px;
 }
