@@ -11,6 +11,7 @@ import Signup from "./pages/Signup";
 import Catalog from "./pages/CourseCatalog";
 import ProductDetails from "./pages/ProductDetails";
 import Comparison from "./pages/Comparison";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (

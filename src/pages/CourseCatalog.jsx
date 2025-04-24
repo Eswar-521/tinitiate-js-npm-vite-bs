@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from "react";
+import LazyLoad from "react-lazyload";
 import "../styles/CourseCatalog.css";
+
 
 const CourseCatalog = () => {
   const [courses, setCourses] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const coursesPerPage = 12; // Number of courses displayed per page
+
+  // Array of available images (assuming you have 4 images named course1.png, course2.png, etc.)
+  const imagePaths = [
+    "/assets/course1.png", 
+    "/assets/course2.png", 
+    "/assets/course3.png", 
+    "/assets/course4.png"
+  ];
 
   // Fetch data from JSON file
   useEffect(() => {
@@ -21,6 +33,12 @@ const CourseCatalog = () => {
       course.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  // Pagination logic
+  const indexOfLast = currentPage * coursesPerPage;
+  const indexOfFirst = indexOfLast - coursesPerPage;
+  const currentCourses = filteredCourses.slice(indexOfFirst, indexOfLast);
+  const totalPages = Math.ceil(filteredCourses.length / coursesPerPage);
+
   return (
     <div className="course-catalog">
       {/* Search Box */}
@@ -36,11 +54,18 @@ const CourseCatalog = () => {
       {/* Course Grid Section */}
       <div className="container">
         <div className="row">
-          {filteredCourses.length > 0 ? (
-            filteredCourses.map((course, index) => (
+          {currentCourses.length > 0 ? (
+            currentCourses.map((course, index) => (
               <div key={index} className="col-md-4">
                 <div className="course-card">
-                  <img src={course.image_path} alt={course.course_name} />
+                  <LazyLoad height={200} offset={100}>
+                    {/* Dynamically assign images to each course */} 
+                    <img
+                      src={imagePaths[index % imagePaths.length]}  // Loop through the imagePaths array
+                      alt={course.course_name}
+                      className="course-image"
+                    />
+                  </LazyLoad>
                   <h3>{course.course_name}</h3>
                   <p className="category">{course.course_category}</p>
                   <p className="price">{course.price}</p>
@@ -52,6 +77,19 @@ const CourseCatalog = () => {
             <p className="no-results">No matching courses found.</p>
           )}
         </div>
+      </div>
+
+      {/* Pagination */}
+      <div className="pagination">
+        {[...Array(totalPages).keys()].map((num) => (
+          <button
+            key={num}
+            className={`page-btn ${currentPage === num + 1 ? "active" : ""}`}
+            onClick={() => setCurrentPage(num + 1)}
+          >
+            {num + 1}
+          </button>
+        ))}
       </div>
     </div>
   );

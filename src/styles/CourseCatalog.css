@@ -1,60 +1,81 @@
-/* Search Bar */
-.search-bar {
-  text-align: center;
-  margin-bottom: 20px;
+/* CourseCatalog.css */
+.course-catalog {
+  margin-top: 20px;
 }
 
 .search-bar input {
-  width: 60%;
+  width: 100%;
   padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ddd;
+  margin-bottom: 20px;
   border-radius: 5px;
-  outline: none;
+  border: 1px solid #ccc;
 }
 
-/* Course Cards */
-.course-card {
-  background: white;
-  border: 1px solid #ddd;
+.search-bar input {
+  width: 300px;       /* 👈 Reduce width */
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 15px;
+}
+
+.course-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
 .course-card img {
-  width: 100%;
-  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 .course-card h3 {
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
-.course-card .category {
-  font-size: 14px;
-  color: #888;
-}
-
+.course-card .category,
 .course-card .price {
-  font-weight: bold;
-  color: #007bff;
+  font-size: 1.1em;
+  color: #555;
 }
 
 .course-card .description {
-  font-size: 14px;
-  color: #666;
+  font-size: 0.9em;
+  color: #777;
 }
 
-/* No Results Message */
 .no-results {
   text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  color: red;
+  font-size: 1.2em;
+  color: #888;
+}
+
+.pagination {
+  text-align: center;
   margin-top: 20px;
+}
+
+.page-btn {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.page-btn:hover {
+  background-color: #ddd;
 }
