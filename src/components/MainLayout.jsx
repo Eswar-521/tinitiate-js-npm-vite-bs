@@ -25,16 +25,16 @@ const MainLayout = () => {
     );
 
     if (matchedPage) {
-      navigate(matchedPage.path); // Navigate to the matched page
-      setSearchTerm(""); // Clear the search bar
+      navigate(matchedPage.path); 
+      setSearchTerm(""); 
     } else {
-      alert("No matching page found!"); // Show an alert if no match
+      alert("No matching page found!"); 
     }
   };
 
   return (
     <>
-      {/* Header with Search Bar */}
+      
       <Header>
         <div style={{ display: "flex", alignItems: "center" }}>
           {/* Search Input */}
