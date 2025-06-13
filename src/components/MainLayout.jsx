@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import LeftSidebar from "./LeftSidebar";
+import LeftSidebar from "../components/LeftSidebar";
 import RightSidebar from "../components/RightSidebar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
