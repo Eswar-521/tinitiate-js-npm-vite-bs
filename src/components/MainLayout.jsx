@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import LeftSidebar from "../components/LeftSidebar";
-import RightSidebar from "../components/RightSidebar";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import LeftSidebar from "./LeftSidebar";
+import RightSidebar from "./RightSidebar";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const pages = [
   { name: "Home", path: "/" },
