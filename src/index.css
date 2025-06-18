@@ -1,26 +1,21 @@
-html, body {
-  height: 100%;
+/* src/index.css */
+body {
   margin: 0;
   padding: 0;
-}
-
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Full height */
-}
-
-.content-container {
-  flex: 1; /* Pushes footer down */
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  font-family: Arial, sans-serif;
   background-color: #f8f9fa;
-  padding: 10px;
-  text-align: center;
-  border-top: 1px solid #ddd;
+}
+
+nav {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
 }
