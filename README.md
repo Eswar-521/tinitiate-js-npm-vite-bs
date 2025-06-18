@@ -1,55 +1,42 @@
-## JS NPM Vite Bootstrap Project (`js-npm-vite-bs`)
+# ts-npm-vite-bs Project Setup
 
-### Project Creation
+## 1. Project Creation
+The project was created using Vite with TypeScript and React:
 
 ```sh
-# Create a new Vite project with React template
-npm create vite@latest js-npm-vite-bs 
-
-# Navigate to the project directory
-cd js-npm-vite-bs
+npm create vite@latest ts-npm-vite-bs 
 ```
 
-### Installing Dependencies
+## 2. Navigate to the Project Directory
+```sh
+cd ts-npm-vite-bs
+```
+
+## 3. Install Dependencies
+Install the required packages:
 
 ```sh
-# Install necessary dependencies
 npm install
 ```
-# Install Bootstrap for styling
+
+### 3.1 Install Bootstrap and Required Packages
 ```sh
-npm install bootstrap
+npm install bootstrap react-bootstrap
 ```
-# Install React Router for navigation (if needed)
+
+### 3.2 Install React Router
 ```sh
 npm install react-router-dom
 ```
 
-### Adding Bootstrap 
-
-Import Bootstrap CSS in `main.jsx`:
-
-```jsx
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+### 3.3 Install Additional Packages (If Needed)
+If using icons and additional styling:
+```sh
+npm install react-icons
 ```
 
-### Running the Project
-
+## 4. Start the Development Server
+Run the project in development mode:
 ```sh
 npm run dev
-```
-
-### Building for Production
-
-```sh
-npm run build
 ```
